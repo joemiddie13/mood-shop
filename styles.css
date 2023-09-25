@@ -9,7 +9,16 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color: bisque;
+    background-color: rgb(204, 103, 31);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.page-header h4 {
+    margin-left: 40px;
+    font-family: 'Patrick Hand', cursive;
+    font-size: 30px;
 }
 
 .page-header ul {
@@ -17,10 +26,53 @@ body {
     flex-direction: row;
     justify-content: space-between;
     list-style: none;
+    margin-right: 40px;
+    font-size: 25px;
 }
 
 .page-header a {
     display: block;
     padding: 0.5em;
     text-decoration: none;
+    color: inherit;
+    font-family: comic 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-shadow: 2px 2px 4px #080325;
+}
+
+.items {
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1em;
+}
+
+.items img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    max-width: 100%;
+    transition: transform 0.4s;
+}
+
+.items button {
+    margin: auto;
+    display: block;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-bottom: 3px solid #0056b3;
+    border-radius: 5px;
+}
+
+.items button:active {
+    border-bottom: 1px solid #0056b3;
+    padding-bottom: 12px;
+}
+
+.items p:nth-child(3) {
+    text-align: center;
 }
